@@ -74,7 +74,7 @@ def api_signup(request):
             email_address.send_confirmation(request)
             logger.info("Confirmation email sent")
         except Exception as e:
-            logger.error("Error sending confirmation email: %s", e)
+            logger.exception("Error sending confirmation email")
             return JsonResponse({'success': False, 'error': 'Failed to send confirmation email'}, status=500)
 
         return JsonResponse({

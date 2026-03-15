@@ -169,7 +169,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 # -- django-allauth --
-SITE_ID = 1
+# SITE_ID = 1
+SITE_ID = int(os.environ.get('SITE_ID', 1))
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -232,7 +233,7 @@ EMAIL_HOST_PASSWORD = 'rgqu kqfe capo wqsa'
 
 EMAIL_HOST_USER = 'ananyasingh180600@gmail.com'
 
-DEFAULT_FROM_EMAIL = 'Treestagram <>'
+DEFAULT_FROM_EMAIL = 'Treestagram <ananyasingh180600@gmail.com>'
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', '')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', '')

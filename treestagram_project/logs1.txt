@@ -1,107 +1,249 @@
 Retrieving logs...
-============= i-0b2eb2552094f41df ==============
+============= i-07f17d50456b4d260 ==============
+----------------------------------------
+/var/log/web.stdout.log
+----------------------------------------
+Mar 15 06:11:04 ip-172-31-17-180 web[2173]: [2026-03-15 06:11:04 +0000] [2173] [INFO] Starting gunicorn 25.0.3
+Mar 15 06:11:04 ip-172-31-17-180 web[2173]: [2026-03-15 06:11:04 +0000] [2173] [INFO] Listening at: http://127.0.0.1:8000 (2173)
+Mar 15 06:11:04 ip-172-31-17-180 web[2173]: [2026-03-15 06:11:04 +0000] [2173] [INFO] Using worker: gthread
+Mar 15 06:11:04 ip-172-31-17-180 web[2177]: [2026-03-15 06:11:04 +0000] [2177] [INFO] Booting worker with pid: 2177
+Mar 15 06:23:11 ip-172-31-17-180 web[2173]: [2026-03-15 06:23:11 +0000] [2173] [INFO] Handling signal: term
+Mar 15 06:23:11 ip-172-31-17-180 web[2177]: [2026-03-15 06:23:11 +0000] [2177] [INFO] Worker exiting (pid: 2177)
+Mar 15 06:23:11 ip-172-31-17-180 web[2173]: [2026-03-15 06:23:11 +0000] [2173] [INFO] Shutting down: Master
+Mar 15 06:23:13 ip-172-31-17-180 web[3064]: [2026-03-15 06:23:13 +0000] [3064] [INFO] Starting gunicorn 25.0.3
+Mar 15 06:23:13 ip-172-31-17-180 web[3064]: [2026-03-15 06:23:13 +0000] [3064] [INFO] Listening at: http://127.0.0.1:8000 (3064)
+Mar 15 06:23:13 ip-172-31-17-180 web[3064]: [2026-03-15 06:23:13 +0000] [3064] [INFO] Using worker: gthread
+Mar 15 06:23:13 ip-172-31-17-180 web[3068]: [2026-03-15 06:23:13 +0000] [3068] [INFO] Booting worker with pid: 3068
+Mar 15 06:33:29 ip-172-31-17-180 web[3064]: [2026-03-15 06:33:29 +0000] [3064] [INFO] Handling signal: term
+Mar 15 06:33:29 ip-172-31-17-180 web[3068]: [2026-03-15 06:33:29 +0000] [3068] [INFO] Worker exiting (pid: 3068)
+Mar 15 06:33:29 ip-172-31-17-180 web[3064]: [2026-03-15 06:33:29 +0000] [3064] [INFO] Shutting down: Master
+Mar 15 06:33:31 ip-172-31-17-180 web[3853]: [2026-03-15 06:33:31 +0000] [3853] [INFO] Starting gunicorn 25.0.3
+Mar 15 06:33:31 ip-172-31-17-180 web[3853]: [2026-03-15 06:33:31 +0000] [3853] [INFO] Listening at: http://127.0.0.1:8000 (3853)
+Mar 15 06:33:31 ip-172-31-17-180 web[3853]: [2026-03-15 06:33:31 +0000] [3853] [INFO] Using worker: gthread
+Mar 15 06:33:31 ip-172-31-17-180 web[3857]: [2026-03-15 06:33:31 +0000] [3857] [INFO] Booting worker with pid: 3857
+
+
 ----------------------------------------
 /var/log/eb-engine.log
 ----------------------------------------
-2026/03/15 04:32:41.917891 [INFO] Running command: systemctl enable aws-eb.target
-2026/03/15 04:32:42.166473 [INFO] Running command: systemctl start aws-eb.target
-2026/03/15 04:32:42.176423 [INFO] Running command: systemctl enable cfn-hup.service
-2026/03/15 04:32:42.425891 [INFO] Created symlink /etc/systemd/system/multi-user.target.wants/cfn-hup.service → /etc/systemd/system/cfn-hup.service.
 
-2026/03/15 04:32:42.425920 [INFO] Running command: systemctl is-active cfn-hup.service
-2026/03/15 04:32:42.434982 [INFO] cfn-hup process is not running, starting it now
-2026/03/15 04:32:42.435006 [INFO] Running command: systemctl show -p PartOf cfn-hup.service
-2026/03/15 04:32:42.444881 [INFO] Running command: systemctl is-active cfn-hup.service
-2026/03/15 04:32:42.453116 [INFO] Running command: systemctl start cfn-hup.service
-2026/03/15 04:32:42.522634 [INFO] Instance has NOT been bootstrapped
-2026/03/15 04:32:42.522650 [INFO] Executing instruction: SetupPublishLogCronjob
-2026/03/15 04:32:42.522654 [INFO] Setup publish logs cron job...
-2026/03/15 04:32:42.522658 [INFO] Copying file /opt/elasticbeanstalk/config/private/logtasks/cron/publishlogs to /etc/cron.d/publishlogs
-2026/03/15 04:32:42.525121 [INFO] Instance has NOT been bootstrapped
-2026/03/15 04:32:42.525313 [INFO] Executing instruction: MarkBootstrapped
-2026/03/15 04:32:42.525323 [INFO] Starting MarkBootstrapped
-2026/03/15 04:32:42.525359 [INFO] Instance has NOT been bootstrapped
-2026/03/15 04:32:42.525448 [INFO] Marked instance as Bootstrapped
-2026/03/15 04:32:42.525453 [INFO] Executing instruction: Save CFN Stack Info
-2026/03/15 04:32:42.525507 [INFO] Executing cleanup logic
-2026/03/15 04:32:42.525518 [INFO] Platform Engine finished execution on command: env-launch
+2026/03/15 06:33:29.306158 [INFO] deregistering process: web
+2026/03/15 06:33:29.306171 [INFO] Running command: systemctl show -p PartOf web.service
+2026/03/15 06:33:29.321971 [INFO] Running command: systemctl is-active web.service
+2026/03/15 06:33:29.333162 [INFO] Running command: systemctl disable web.service
+2026/03/15 06:33:29.648174 [INFO] Removed "/etc/systemd/system/multi-user.target.wants/web.service".
 
-2026/03/15 04:34:29.723518 [INFO] Starting...
-2026/03/15 04:34:29.723578 [INFO] Starting EBPlatform-PlatformEngine
-2026/03/15 04:34:29.723603 [INFO] reading event message file
-2026/03/15 04:34:29.724038 [INFO] Engine received EB command cfn-hup-exec
+2026/03/15 06:33:29.648256 [INFO] Running command: systemctl daemon-reload
+2026/03/15 06:33:30.028991 [INFO] Running command: systemctl reset-failed
+2026/03/15 06:33:30.037369 [INFO] Running command: systemctl is-active web.service
+2026/03/15 06:33:30.044469 [INFO] Process web has been fully terminated
+2026/03/15 06:33:30.044484 [INFO] All processes have been fully terminated
+2026/03/15 06:33:30.044489 [INFO] Removing /var/app/current/ if it exists
+2026/03/15 06:33:30.090091 [INFO] Renaming /var/app/staging/ to /var/app/current/
+2026/03/15 06:33:30.090144 [INFO] Register application processes...
+2026/03/15 06:33:30.090148 [INFO] Registering the proc: web
 
-2026/03/15 04:34:29.795157 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:288378107443:stack/awseb-e-5jxmzqq5c2-stack/e35a5f00-2027-11f1-bbc0-0afff431e359 -r AWSEBAutoScalingGroup --region us-east-1
-2026/03/15 04:34:30.085083 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:288378107443:stack/awseb-e-5jxmzqq5c2-stack/e35a5f00-2027-11f1-bbc0-0afff431e359 -r AWSEBBeanstalkMetadata --region us-east-1
-2026/03/15 04:34:30.379248 [INFO] checking whether command app-deploy is applicable to this instance...
-2026/03/15 04:34:30.379260 [INFO] this command is applicable to the instance, thus instance should execute command
-2026/03/15 04:34:30.379264 [INFO] Setting up deployment log with request ID: 7cf9373f-c8a3-4f32-be60-cbd1fd734977
-2026/03/15 04:34:30.425032 [INFO] Started S3 deployment log upload to s3://elasticbeanstalk-us-east-1-288378107443/resources/environments/logs/deployments/e-5jxmzqq5c2/eb-deployment-7cf9373f-c8a3-4f32-be60-cbd1fd734977.log
-2026/03/15 04:34:30.425098 [INFO] Engine command: (app-deploy)
+2026/03/15 06:33:30.090156 [INFO] Running command: systemctl show -p PartOf web.service
+2026/03/15 06:33:30.109652 [INFO] Running command: systemctl daemon-reload
+2026/03/15 06:33:30.351578 [INFO] Running command: systemctl reset-failed
+2026/03/15 06:33:30.359419 [INFO] Running command: systemctl is-enabled eb-app.target
+2026/03/15 06:33:30.367442 [INFO] Running command: systemctl enable eb-app.target
+2026/03/15 06:33:30.648688 [INFO] Running command: systemctl start eb-app.target
+2026/03/15 06:33:30.657520 [INFO] Running command: systemctl enable web.service
+2026/03/15 06:33:30.907830 [INFO] Created symlink /etc/systemd/system/multi-user.target.wants/web.service → /etc/systemd/system/web.service.
 
-2026/03/15 04:34:30.425103 [INFO] Downloading EB Application...
-2026/03/15 04:34:30.425106 [INFO] Region: us-east-1
-2026/03/15 04:34:30.425108 [INFO] envID: e-5jxmzqq5c2
-2026/03/15 04:34:30.425111 [INFO] envBucket: elasticbeanstalk-us-east-1-288378107443
-2026/03/15 04:34:30.425113 [INFO] accountID: 288378107443
-2026/03/15 04:34:30.425116 [INFO] Using manifest file name from command request
-2026/03/15 04:34:30.425139 [INFO] Unable to get version manifest file.
-2026/03/15 04:34:30.425142 [INFO] Downloading latest manifest available.
-2026/03/15 04:34:30.425144 [INFO] Download latest app version manifest
-2026/03/15 04:34:30.425293 [INFO] resources/environments/e-5jxmzqq5c2/_runtime/versions/manifest
-2026/03/15 04:34:30.484424 [INFO] latestManifest key *: resources/environments/e-5jxmzqq5c2/_runtime/versions/manifest_1773549110922
+2026/03/15 06:33:30.907883 [INFO] Running command: systemctl show -p PartOf web.service
+2026/03/15 06:33:30.919028 [INFO] Running command: systemctl is-active web.service
+2026/03/15 06:33:30.926303 [INFO] Running command: systemctl start web.service
+2026/03/15 06:33:32.983134 [INFO] Executing instruction: start X-Ray
+2026/03/15 06:33:32.983142 [INFO] X-Ray is not enabled.
+2026/03/15 06:33:32.983145 [INFO] Executing instruction: start proxy with new configuration
+2026/03/15 06:33:32.983191 [INFO] Running command: /usr/sbin/nginx -t -c /var/proxy/staging/nginx/nginx.conf
+2026/03/15 06:33:33.001460 [INFO] nginx: [warn] could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+nginx: the configuration file /var/proxy/staging/nginx/nginx.conf syntax is ok
+nginx: configuration file /var/proxy/staging/nginx/nginx.conf test is successful
 
-2026/03/15 04:34:30.484703 [INFO] Downloading: bucket: elasticbeanstalk-us-east-1-288378107443, object: resources/environments/e-5jxmzqq5c2/_runtime/versions/manifest_1773549110922, expected bucket owner: 288378107443
-2026/03/15 04:34:30.521086 [INFO] Download successful152bytes downloaded
-2026/03/15 04:34:30.521193 [INFO] Trying to read and parse version manifest...
-2026/03/15 04:34:30.521304 [INFO] Downloading: bucket: elasticbeanstalk-us-east-1-288378107443, object: resources/environments/e-5jxmzqq5c2/_runtime/_versions/treestagram-project/app-260315_003135490047, expected bucket owner: 288378107443
-2026/03/15 04:34:30.685082 [INFO] Download successful13338351bytes downloaded
-2026/03/15 04:34:30.685428 [INFO] Executing instruction: ElectLeader
-2026/03/15 04:34:30.685443 [INFO] Running leader election for instance i-0b2eb2552094f41df...
-2026/03/15 04:34:30.685445 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
-2026/03/15 04:34:30.685457 [INFO] Running command: /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-east-1:288378107443:stack/awseb-e-5jxmzqq5c2-stack/e35a5f00-2027-11f1-bbc0-0afff431e359 --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id a033dd24-818e-4c13-93d5-696d9d615c1a --listener-id i-0b2eb2552094f41df --region us-east-1
-2026/03/15 04:34:30.985846 [INFO] Instance is Leader.
-2026/03/15 04:34:30.985900 [INFO] Executing instruction: stopSqsd
-2026/03/15 04:34:30.985910 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
-2026/03/15 04:34:30.985913 [INFO] Executing instruction: PreBuildEbExtension
-2026/03/15 04:34:30.985950 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
-2026/03/15 04:34:30.985963 [INFO] Running command: /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-east-1:288378107443:stack/awseb-e-5jxmzqq5c2-stack/e35a5f00-2027-11f1-bbc0-0afff431e359 -r AWSEBAutoScalingGroup --region us-east-1 --configsets Infra-EmbeddedPreBuild
-2026/03/15 04:34:31.438103 [INFO] Finished executing the config set Infra-EmbeddedPreBuild.
+2026/03/15 06:33:33.001719 [INFO] Running command: cp -rp /var/proxy/staging/nginx/* /etc/nginx
+2026/03/15 06:33:33.004835 [INFO] Running command: systemctl show -p PartOf nginx.service
+2026/03/15 06:33:33.020944 [INFO] Running command: systemctl daemon-reload
+2026/03/15 06:33:33.311608 [INFO] Running command: systemctl reset-failed
+2026/03/15 06:33:33.319940 [INFO] Running command: systemctl show -p PartOf nginx.service
+2026/03/15 06:33:33.333123 [INFO] Running command: systemctl is-active nginx.service
+2026/03/15 06:33:33.341465 [INFO] Running command: systemctl start nginx.service
+2026/03/15 06:33:33.443825 [INFO] Executing instruction: configureSqsd
+2026/03/15 06:33:33.443846 [INFO] This is a web server environment instance, skip configure sqsd daemon ...
+2026/03/15 06:33:33.443850 [INFO] Executing instruction: startSqsd
+2026/03/15 06:33:33.443853 [INFO] This is a web server environment instance, skip start sqsd daemon ...
+2026/03/15 06:33:33.443856 [INFO] Executing instruction: Track pids in healthd
+2026/03/15 06:33:33.443860 [INFO] This is an enhanced health env...
+2026/03/15 06:33:33.443872 [INFO] Running command: systemctl show -p ConsistsOf aws-eb.target | cut -d= -f2
+2026/03/15 06:33:33.455355 [INFO] nginx.service cfn-hup.service healthd.service
 
-2026/03/15 04:34:31.438264 [INFO] Executing instruction: StageApplication
-2026/03/15 04:34:31.438269 [INFO] Recreating /var/app/staging/
-2026/03/15 04:34:31.438380 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
-2026/03/15 04:34:31.438394 [INFO] Running command: /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
-2026/03/15 04:34:31.821714 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
-2026/03/15 04:34:31.837328 [INFO] Executing instruction: RunAppDeployPreBuildHooks
-2026/03/15 04:34:31.837362 [INFO] No hooks found in .platform/hooks/prebuild/, skipping
-2026/03/15 04:34:31.837365 [INFO] Executing instruction: InstallDependency
-2026/03/15 04:34:31.837370 [INFO] checking dependencies file
-2026/03/15 04:34:31.837381 [INFO] Installing dependencies with requirements.txt by using Pip
-2026/03/15 04:34:31.837401 [INFO] Running command: /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt
-2026/03/15 04:34:31.839213 [INFO] /bin/sh: line 1: /var/app/venv/staging-LQM1lest/bin/pip: No such file or directory
+2026/03/15 06:33:33.455385 [INFO] Running command: systemctl show -p ConsistsOf eb-app.target | cut -d= -f2
+2026/03/15 06:33:33.465509 [INFO] web.service
 
-2026/03/15 04:34:31.839251 [ERROR] An error occurred during execution of command [app-deploy] - [InstallDependency]. Stop running the command. Error: fail to install dependencies with requirements.txt file with error Command /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt failed with error exit status 127. Stderr:/bin/sh: line 1: /var/app/venv/staging-LQM1lest/bin/pip: No such file or directory
- 
+2026/03/15 06:33:33.465739 [INFO] Executing instruction: RunAppDeployPostDeployHooks
+2026/03/15 06:33:33.465749 [INFO] No hooks found in .platform/hooks/postdeploy/, skipping
+2026/03/15 06:33:33.465752 [INFO] Executing cleanup logic
+2026/03/15 06:33:33.465836 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment successfully generated a 'Procfile'.","timestamp":1773556403880,"severity":"INFO"},{"msg":"Instance deployment completed successfully.","timestamp":1773556413465,"severity":"INFO"}]}]}
 
-2026/03/15 04:34:31.839253 [INFO] Executing cleanup logic
-2026/03/15 04:34:31.839323 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed to install application dependencies. The deployment failed.","timestamp":1773549271839,"severity":"ERROR"},{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1773549271839,"severity":"ERROR"}]}]}
+2026/03/15 06:33:33.492898 [INFO] Platform Engine finished execution on command: app-deploy
 
-2026/03/15 04:34:31.866602 [INFO] Platform Engine finished execution on command: app-deploy
+2026/03/15 06:35:53.185864 [INFO] Starting...
+2026/03/15 06:35:53.185916 [INFO] Starting EBPlatform-PlatformEngine
+2026/03/15 06:35:53.185942 [INFO] reading event message file
+2026/03/15 06:35:53.186329 [INFO] Engine received EB command cfn-hup-exec
 
-2026/03/15 04:35:53.711074 [INFO] Starting...
-2026/03/15 04:35:53.711130 [INFO] Starting EBPlatform-PlatformEngine
-2026/03/15 04:35:53.711164 [INFO] reading event message file
-2026/03/15 04:35:53.711599 [INFO] Engine received EB command cfn-hup-exec
+2026/03/15 06:35:53.258667 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:288378107443:stack/awseb-e-s3jh5fee3t-stack/58185060-2035-11f1-9571-0e166b5438e5 -r AWSEBAutoScalingGroup --region us-east-1
+2026/03/15 06:35:53.582030 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:288378107443:stack/awseb-e-s3jh5fee3t-stack/58185060-2035-11f1-9571-0e166b5438e5 -r AWSEBBeanstalkMetadata --region us-east-1
+2026/03/15 06:35:53.889299 [INFO] checking whether command tail-log is applicable to this instance...
+2026/03/15 06:35:53.889311 [INFO] this command is applicable to the instance, thus instance should execute command
+2026/03/15 06:35:53.889318 [INFO] Engine command: (tail-log)
 
-2026/03/15 04:35:53.785851 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:288378107443:stack/awseb-e-5jxmzqq5c2-stack/e35a5f00-2027-11f1-bbc0-0afff431e359 -r AWSEBAutoScalingGroup --region us-east-1
-2026/03/15 04:35:54.077918 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:288378107443:stack/awseb-e-5jxmzqq5c2-stack/e35a5f00-2027-11f1-bbc0-0afff431e359 -r AWSEBBeanstalkMetadata --region us-east-1
-2026/03/15 04:35:54.363205 [INFO] checking whether command tail-log is applicable to this instance...
-2026/03/15 04:35:54.363217 [INFO] this command is applicable to the instance, thus instance should execute command
-2026/03/15 04:35:54.363220 [INFO] Engine command: (tail-log)
+2026/03/15 06:35:53.889367 [INFO] Executing instruction: GetTailLogs
+2026/03/15 06:35:53.889371 [INFO] Tail Logs...
+2026/03/15 06:35:53.889830 [INFO] Running command: tail -n 100 /var/log/web.stdout.log
+2026/03/15 06:35:53.892051 [INFO] Running command: tail -n 100 /var/log/eb-engine.log
+2026/03/15 06:35:53.893989 [INFO] Running command: tail -n 100 /var/log/nginx/access.log
+2026/03/15 06:35:53.895729 [INFO] Running command: tail -n 100 /var/log/nginx/error.log
+2026/03/15 06:35:53.952612 [INFO] Executing cleanup logic
+2026/03/15 06:35:53.952693 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment completed successfully.","timestamp":1773556553952,"severity":"INFO"}]}]}
 
-2026/03/15 04:35:54.363288 [INFO] Executing instruction: GetTailLogs
-2026/03/15 04:35:54.363291 [INFO] Tail Logs...
-2026/03/15 04:35:54.363887 [INFO] Running command: tail -n 100 /var/log/eb-engine.log
+2026/03/15 06:35:53.952712 [INFO] Platform Engine finished execution on command: tail-log
+
+2026/03/15 06:38:29.578491 [INFO] Starting...
+2026/03/15 06:38:29.578534 [INFO] Starting EBPlatform-PlatformEngine
+2026/03/15 06:38:29.578564 [INFO] reading event message file
+2026/03/15 06:38:29.578938 [INFO] Engine received EB command cfn-hup-exec
+
+2026/03/15 06:38:29.655835 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:288378107443:stack/awseb-e-s3jh5fee3t-stack/58185060-2035-11f1-9571-0e166b5438e5 -r AWSEBAutoScalingGroup --region us-east-1
+2026/03/15 06:38:29.952563 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:288378107443:stack/awseb-e-s3jh5fee3t-stack/58185060-2035-11f1-9571-0e166b5438e5 -r AWSEBBeanstalkMetadata --region us-east-1
+2026/03/15 06:38:30.246902 [INFO] checking whether command tail-log is applicable to this instance...
+2026/03/15 06:38:30.246914 [INFO] this command is applicable to the instance, thus instance should execute command
+2026/03/15 06:38:30.246919 [INFO] Engine command: (tail-log)
+
+2026/03/15 06:38:30.246971 [INFO] Executing instruction: GetTailLogs
+2026/03/15 06:38:30.246974 [INFO] Tail Logs...
+2026/03/15 06:38:30.247286 [INFO] Running command: tail -n 100 /var/log/web.stdout.log
+2026/03/15 06:38:30.249456 [INFO] Running command: tail -n 100 /var/log/eb-engine.log
+
+
+----------------------------------------
+/var/log/nginx/access.log
+----------------------------------------
+172.31.28.99 - - [15/Mar/2026:06:27:35 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:27:46 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:27:50 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:28:01 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:28:05 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:28:13 +0000] "POST /api/signup/ HTTP/1.1" 400 89 "http://treestagram-env-1.eba-ni2xvdyh.us-east-1.elasticbeanstalk.com/signup" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "108.14.13.235"
+172.31.8.222 - - [15/Mar/2026:06:28:16 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:28:20 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:28:25 +0000] "GET /api/check-username/?username=annanan HTTP/1.1" 200 19 "http://treestagram-env-1.eba-ni2xvdyh.us-east-1.elasticbeanstalk.com/signup" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "108.14.13.235"
+172.31.28.99 - - [15/Mar/2026:06:28:26 +0000] "POST /api/signup/ HTTP/1.1" 500 145 "http://treestagram-env-1.eba-ni2xvdyh.us-east-1.elasticbeanstalk.com/signup" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "108.14.13.235"
+172.31.8.222 - - [15/Mar/2026:06:28:31 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:28:35 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:28:46 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:28:50 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:29:01 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:29:05 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:29:16 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:29:20 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:29:26 +0000] "GET / HTTP/1.1" 200 720 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36 Edg/90.0.818.46" "204.76.203.206"
+172.31.8.222 - - [15/Mar/2026:06:29:31 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:29:35 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:29:46 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:29:50 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:30:01 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:30:05 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:30:16 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:30:20 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:30:31 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:30:35 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:30:46 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:30:50 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:30:59 +0000] "GET / HTTP/1.1" 200 720 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36 Edg/90.0.818.46" "204.76.203.206"
+172.31.8.222 - - [15/Mar/2026:06:31:01 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:31:05 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:31:17 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:31:20 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:31:32 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:31:35 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:31:47 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:31:50 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:32:02 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:32:05 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:32:17 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:32:20 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:32:32 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:32:35 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:32:47 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:32:50 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:33:02 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:33:05 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:33:17 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:33:20 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:33:35 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:33:47 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:33:50 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:33:51 +0000] "GET / HTTP/1.1" 200 720 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "108.14.13.235"
+172.31.8.222 - - [15/Mar/2026:06:33:51 +0000] "GET /assets/index-BO50QZOV.css HTTP/1.1" 200 11812 "http://treestagram-env-1.eba-ni2xvdyh.us-east-1.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "108.14.13.235"
+172.31.8.222 - - [15/Mar/2026:06:33:51 +0000] "GET /assets/index-Cgo38fDW.js HTTP/1.1" 200 34490 "http://treestagram-env-1.eba-ni2xvdyh.us-east-1.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "108.14.13.235"
+172.31.8.222 - - [15/Mar/2026:06:33:51 +0000] "GET /api/csrf/ HTTP/1.1" 200 81 "http://treestagram-env-1.eba-ni2xvdyh.us-east-1.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "108.14.13.235"
+172.31.8.222 - - [15/Mar/2026:06:33:51 +0000] "GET /api/me/ HTTP/1.1" 401 18 "http://treestagram-env-1.eba-ni2xvdyh.us-east-1.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "108.14.13.235"
+172.31.8.222 - - [15/Mar/2026:06:33:52 +0000] "GET /favicon.ico HTTP/1.1" 200 720 "http://treestagram-env-1.eba-ni2xvdyh.us-east-1.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "108.14.13.235"
+172.31.8.222 - - [15/Mar/2026:06:33:54 +0000] "GET /favicon.ico HTTP/1.1" 200 720 "http://treestagram-env-1.eba-ni2xvdyh.us-east-1.elasticbeanstalk.com/signup" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "108.14.13.235"
+172.31.8.222 - - [15/Mar/2026:06:34:02 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:34:05 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:34:16 +0000] "GET /api/check-username/?username=nananana HTTP/1.1" 200 19 "http://treestagram-env-1.eba-ni2xvdyh.us-east-1.elasticbeanstalk.com/signup" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "108.14.13.235"
+172.31.8.222 - - [15/Mar/2026:06:34:17 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:34:20 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:34:32 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:34:32 +0000] "POST /api/signup/ HTTP/1.1" 500 145 "http://treestagram-env-1.eba-ni2xvdyh.us-east-1.elasticbeanstalk.com/signup" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "108.14.13.235"
+172.31.28.99 - - [15/Mar/2026:06:34:35 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:34:47 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:34:50 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:35:02 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:35:05 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:35:17 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:35:20 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:35:32 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:35:35 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:35:47 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:35:50 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:36:02 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:36:05 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:36:17 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:36:20 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:36:32 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:36:35 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:36:47 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:36:50 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:37:02 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:37:05 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:37:17 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:37:20 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:37:32 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:37:36 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:37:47 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:37:51 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:38:02 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:38:06 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.8.222 - - [15/Mar/2026:06:38:17 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.99 - - [15/Mar/2026:06:38:21 +0000] "GET / HTTP/1.1" 200 720 "-" "ELB-HealthChecker/2.0" "-"
+
+
+----------------------------------------
+/var/log/nginx/error.log
+----------------------------------------
+2026/03/15 06:11:06 [warn] 2178#2178: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/03/15 06:11:06 [warn] 2211#2211: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/03/15 06:11:06 [warn] 2212#2212: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/03/15 06:23:15 [warn] 3069#3069: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/03/15 06:23:15 [warn] 3102#3102: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/03/15 06:23:15 [warn] 3103#3103: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/03/15 06:33:32 [warn] 3858#3858: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/03/15 06:33:33 [warn] 3891#3891: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/03/15 06:33:33 [warn] 3892#3892: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
 
 
