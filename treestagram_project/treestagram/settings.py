@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -134,7 +135,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
  BASE_DIR / 'frontend' / 'assets',
 ]
-WHITENOISE_ROOT = BASE_DIR / 'frontend'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # Default primary key field type
@@ -157,7 +158,7 @@ MESSAGE_TAGS = {
 }
 
 # -- Allow Svelte dev server to talk to Django --
-CSRF_TRUSTED_ORIGINS = ['http://localhost:5173', 'http://YOUR-ENV-NAME.us-east-1.elasticbeanstalk.com']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:5173', 'http://treestagram-env-1.eba-ni2xvdyh.us-east-1.elasticbeanstalk.com/']
 SESSION_COOKIE_SAMESITE = 'Lax'
 SESSION_COOKIE_HTTPONLY = True
 
