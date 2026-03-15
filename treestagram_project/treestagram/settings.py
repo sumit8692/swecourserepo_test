@@ -228,9 +228,9 @@ EMAIL_PORT = 587
 
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = 'rgqu kqfe capo wqsa'
+EMAIL_HOST_PASSWORD = 'rgqu kqfe capo wqsa'
 
-EMAIL_HOST_PASSWORD = 'ananyasingh180600@gmail.com'
+EMAIL_HOST_USER = 'ananyasingh180600@gmail.com'
 
 DEFAULT_FROM_EMAIL = 'Treestagram <>'
 
