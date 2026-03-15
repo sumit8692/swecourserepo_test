@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 from django.contrib.messages import constants as message_constants
 
@@ -24,9 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^6mmku6r49r2@*(%p7(bys*c)35$swil%+)-u%jc2(724m-16g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -64,7 +66,8 @@ ROOT_URLCONF = 'treestagram.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'accounts' / 'templates'],
+        'DIRS': [BASE_DIR / 'accounts' / 'templates', BASE_DIR / 'frontend', # Svelte index.html
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,7 +128,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
+STATIC_URL = '/assets/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+ BASE_DIR / 'frontend' / 'assets',
+]
+WHITENOISE_ROOT = BASE_DIR / 'frontend'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -147,9 +157,11 @@ MESSAGE_TAGS = {
 }
 
 # -- Allow Svelte dev server to talk to Django --
-CSRF_TRUSTED_ORIGINS = ['http://localhost:5173']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:5173', 'http://YOUR-ENV-NAME.us-east-1.elasticbeanstalk.com']
 SESSION_COOKIE_SAMESITE = 'Lax'
 SESSION_COOKIE_HTTPONLY = True
+
+
 
 # -- Media files (profile pictures etc.) --
 MEDIA_URL = '/media/'
@@ -175,3 +187,48 @@ SOCIALACCOUNT_AUTO_SIGNUP = True
 SOCIALACCOUNT_EMAIL_VERIFICATION = 'none'
 SOCIALACCOUNT_LOGIN_ON_GET = True
 
+SOCIALACCOUNT_PROVIDERS = {
+
+    'google': {
+
+        'SCOPE': ['profile', 'email'],
+
+        'AUTH_PARAMS': {'access_type': 'online'},
+
+        'APP': {
+
+            'client_id': '',
+
+            'secret': '',
+
+        },
+
+    }
+
+}
+
+ 
+
+# -- Email backend --
+
+# Development (prints to terminal):
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ 
+
+# Gmail SMTP
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_PORT = 587
+
+EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = 'rgqu kqfe capo wqsa'
+
+EMAIL_HOST_PASSWORD = 'ananyasingh180600@gmail.com'
+
+DEFAULT_FROM_EMAIL = 'Treestagram <>'
