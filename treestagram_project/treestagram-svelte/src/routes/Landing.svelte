@@ -113,6 +113,14 @@
     </div>
 </div>
 
+<footer class="made-with-love">
+    <div class="love-line"></div>
+    <div class="love-text">
+        Made with <span class="love-word">Love</span> at <span class="nyu-word">NYU</span>
+    </div>
+    <div class="love-leaf">🌿</div>
+</footer>
+
 <style>
     :root {
         --bark: #2c1810;
@@ -128,7 +136,9 @@
         background: var(--bark);
         position: relative;
         overflow: hidden;
-        min-height: 100vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     /* Decorative rings */
@@ -176,7 +186,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 1.5rem 3rem;
+        padding: 1rem 3rem;
+        flex-shrink: 0;
     }
     .logo {
         font-family: "Playfair Display", serif;
@@ -242,11 +253,14 @@
         z-index: 10;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        padding: 6rem 3rem 4rem;
+        gap: 3rem;
+        padding: 2rem 3rem 1.5rem;
         max-width: 1200px;
         margin: 0 auto;
         align-items: center;
+        flex: 1;
+        min-height: 0;
+        width: 100%;
     }
     .hero-eyebrow {
         display: inline-flex;
@@ -260,7 +274,7 @@
         font-size: 0.8rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
     .hero-eyebrow::before {
         content: "🌳";
@@ -268,10 +282,10 @@
     }
     .hero h1 {
         font-family: "Playfair Display", serif;
-        font-size: 4.5rem;
+        font-size: 3.5rem;
         line-height: 1.05;
         color: var(--cream);
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
     .hero h1 em {
         font-style: italic;
@@ -280,10 +294,10 @@
     }
     .hero p {
         color: var(--canopy);
-        font-size: 1.05rem;
-        line-height: 1.7;
+        font-size: 1rem;
+        line-height: 1.6;
         max-width: 440px;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.5rem;
     }
     .hero-ctas {
         display: flex;
@@ -328,13 +342,13 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.75rem;
     }
     .mock-card {
         background: rgba(255, 255, 255, 0.06);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 16px;
-        padding: 1.2rem;
+        padding: 1rem;
         backdrop-filter: blur(10px);
         transition: transform 0.3s;
     }
@@ -348,7 +362,7 @@
         display: flex;
         align-items: center;
         gap: 0.8rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.5rem;
     }
     .mock-avatar {
         width: 36px;
@@ -375,14 +389,14 @@
     }
     .mock-img {
         width: 100%;
-        height: 140px;
+        height: 110px;
         border-radius: 10px;
         background: linear-gradient(135deg, #2d5a27, #4a7c59, #6ba368);
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 3rem;
-        margin-bottom: 0.8rem;
+        font-size: 2.5rem;
+        margin-bottom: 0.6rem;
         position: relative;
         overflow: hidden;
     }
@@ -398,7 +412,7 @@
     }
     .mock-img-2 {
         background: linear-gradient(135deg, #1a3a20, #3d6b45, #5a8c60);
-        height: 100px;
+        height: 80px;
     }
     .img-overlay {
         position: absolute;
@@ -435,18 +449,19 @@
         z-index: 10;
         display: flex;
         justify-content: center;
-        gap: 4rem;
-        padding: 3rem;
+        gap: 3rem;
+        padding: 1.2rem 3rem;
         border-top: 1px solid rgba(255, 255, 255, 0.08);
         max-width: 1200px;
         margin: 0 auto;
+        flex-shrink: 0;
     }
     .stat {
         text-align: center;
     }
     .stat .num {
         font-family: "Playfair Display", serif;
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: var(--leaf);
         display: block;
     }
@@ -471,5 +486,67 @@
             opacity: 1;
             transform: translateY(0);
         }
+    }
+
+    /* ── Made with love footer ── */
+    .made-with-love {
+        background: var(--bark);
+        text-align: center;
+        padding: 1.5rem 1rem 1.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .love-line {
+        width: 50px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--sage), transparent);
+        opacity: 0.4;
+    }
+    .love-text {
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--canopy);
+        opacity: 0.6;
+    }
+    .love-word {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 700;
+        color: var(--sun);
+        opacity: 1;
+    }
+    .nyu-word {
+        font-weight: 700;
+        letter-spacing: 0.25em;
+        opacity: 1;
+        background: linear-gradient(
+            90deg,
+            #9b6fbf,
+            #d8b4fe,
+            #f0d0ff,
+            #d8b4fe,
+            #9b6fbf
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: nyuShimmer 2.5s linear infinite;
+    }
+    @keyframes nyuShimmer {
+        to { background-position: 200% center; }
+    }
+    .love-leaf {
+        font-size: 0.7rem;
+        opacity: 0.5;
+        animation: gentleSway 3s ease-in-out infinite;
+    }
+    @keyframes gentleSway {
+        0%, 100% { transform: rotate(-5deg); }
+        50% { transform: rotate(5deg); }
     }
 </style>
