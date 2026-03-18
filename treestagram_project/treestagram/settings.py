@@ -134,6 +134,7 @@ STATIC_URL = '/assets/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
  BASE_DIR / 'frontend' / 'assets',
+ BASE_DIR / 'frontend',            # includes forest-bg.png and other root-level static files
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
